@@ -5,12 +5,13 @@
   tasks:
   - name: install docker
     yum: name=docker state=present
+  - name: install git
+    yum: name=git state=present
   - name: start docker
     service: name=docker state=started
   - name: pull the dockerfile
     command: docker pull devopsedu/webapp
   - name: run the dockerfile
     command: docker run -itd -P --name webappimage  webapp
-  - name: install git
-    yum: name=git state=present
+  
   
