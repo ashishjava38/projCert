@@ -12,6 +12,6 @@
   - name: pull the dockerfile
     command: docker pull devopsedu/webapp
   - name: run the dockerfile
-    command: docker run -itd -P --name webappimage  webapp
+    command: docker run -itd -P --name webappimage  devopsedu/webap
   
   
