@@ -1,0 +1,12 @@
+---
+- hosts: webservers
+  become: true
+  become_user: root
+  tasks:
+  - name: install docker
+    yum: name=docker state=present
+  - name: start docker
+    service: name=docker state=started
+  - name: install git
+    yum: name=git state=present
+  - name: get the dockerfile from githib
