@@ -10,8 +10,8 @@
   - name: start docker
     service: name=docker state=started
   - name: pull the dockerfile
-    command: docker pull devopsedu/webapp
+    command: docker pull devopsedu/webapp:latest
   - name: run the dockerfile
-    command: docker run -itd -P --name webappimage  devopsedu/webap
+    command: docker run -it -P --name webappimage  devopsedu/webap
   
   
